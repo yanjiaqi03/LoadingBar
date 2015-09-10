@@ -37,12 +37,12 @@ public class HLoadingBar extends BaseView {
 		loading();
 	}
 
-	public void setNumber(int number) {
+	private void setNumber(int number) {
 		this.number = number;
 		invalidate();
 	}
 
-	public void setRadius(float radius) {
+	private void setRadius(float radius) {
 		this.radius = radius;
 		invalidate();
 	}
@@ -238,7 +238,7 @@ public class HLoadingBar extends BaseView {
 
 	}
 
-	public void loading() {
+	private void loading() {
 		ValueAnimator rotateAnim = ValueAnimator.ofFloat(0f, 359f);
 		rotateAnim.setDuration(1500);
 		rotateAnim.setInterpolator(new AccelerateDecelerateInterpolator());
