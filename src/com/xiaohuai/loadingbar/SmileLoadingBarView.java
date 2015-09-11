@@ -24,8 +24,6 @@ public class SmileLoadingBarView extends BaseView{
 		mPaint.setAntiAlias(true);
 		mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 		mPaint.setColor(0xffd2d2d2);
-		
-		setThreadRun();
 	}
 
 	@Override
@@ -79,6 +77,11 @@ public class SmileLoadingBarView extends BaseView{
 		rotate = 0;
 	}
 	
+	@Override
+	protected void onAttachedToWindow() {
+		super.onAttachedToWindow();
+		setThreadRun();
+	}
 	@Override
 	protected void onDetachedFromWindow() {
 		super.onDetachedFromWindow();

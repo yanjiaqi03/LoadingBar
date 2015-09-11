@@ -33,7 +33,6 @@ public class HLoadingBarView extends BaseView {
 		mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 		mPaint.setColor(0xffd2d2d2);
 		setNumber(8);
-		loading();
 	}
 
 	private void setNumber(int number) {
@@ -295,5 +294,17 @@ public class HLoadingBarView extends BaseView {
 				}
 			}
 		});
+	}
+	
+	@Override
+	protected void onAttachedToWindow() {
+		super.onAttachedToWindow();
+		loading();
+	}
+	
+	@Override
+	protected void onDetachedFromWindow() {
+		super.onDetachedFromWindow();
+		clearAnimation();
 	}
 }
