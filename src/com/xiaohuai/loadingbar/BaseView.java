@@ -69,10 +69,9 @@ public abstract class BaseView extends View {
 		}
 	}
 
-	public void setThreadRun(Boolean run) {
+	public void setThreadRun() {
 		threadRun = true;
 		endRun = true;
-		threadRun = run;
 		invalidate();
 	}
 	
