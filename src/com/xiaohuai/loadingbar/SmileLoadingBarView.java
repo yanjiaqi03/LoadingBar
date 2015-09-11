@@ -72,7 +72,6 @@ public class SmileLoadingBarView extends BaseView{
 		}else if(rotate<=-60){
 			valueFlag = speed;
 		}
-		Log.i("Jiaqi", "rotate = " + rotate);
 	}
 
 	@Override
